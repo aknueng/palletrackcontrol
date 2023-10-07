@@ -121,11 +121,11 @@ class _LoginPageState extends State<LoginPage> {
                 const Image(
                   image: AssetImage('assets/images/dci_logo.png'),
                   width: 270,
-                ),                
+                ),
                 Container(
                     alignment: Alignment.topCenter,
-                    child:  Wrap(children: [
-                       Text(
+                    child: Wrap(children: [
+                      Text(
                         '  EQUIPMENT\r\nCHECK SHEET',
                         style: TextStyle(
                           color: Colors.blue,
@@ -269,17 +269,18 @@ class _LoginPageState extends State<LoginPage> {
                           width: 200,
                           height: 40,
                           child: ElevatedButton.icon(
-                              onPressed: () async {
-                                if (formKey.currentState!.validate()) {
-                                  TextInput.finishAutofillContext();
+                            onPressed: () async {
+                              if (formKey.currentState!.validate()) {
+                                TextInput.finishAutofillContext();
 
-                                  formKey.currentState!.save();
-                                  await checkLogin();
-                                }
-                                //formKey.currentState!.reset();
-                              },
-                              label: const Text('     เข้าสู่ระบบ'),
-                              icon: const Icon(FontAwesomeIcons.userLock),),
+                                formKey.currentState!.save();
+                                await checkLogin();
+                              }
+                              //formKey.currentState!.reset();
+                            },
+                            label: const Text('     เข้าสู่ระบบ'),
+                            icon: const Icon(FontAwesomeIcons.userLock),
+                          ),
                         );
                       }
                     }),
@@ -296,6 +297,4 @@ class _LoginPageState extends State<LoginPage> {
       },
     );
   }
-  
-  
 }
