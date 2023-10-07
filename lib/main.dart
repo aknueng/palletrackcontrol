@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:palletrackcontrol/component/scanqrcode.dart';
 import 'package:palletrackcontrol/pages/login.dart';
-import 'package:palletrackcontrol/pages/scanpalletrack.dart';
+import 'package:palletrackcontrol/pages/registerpallet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
@@ -10,7 +11,7 @@ void main() async {
   runApp(const MyApp());
 }
 
-String initPage = '/scan';
+String initPage = '/step';
 Future checkAccount() async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
   String chkLogin = prefs.getString('code') ?? '';
@@ -36,15 +37,19 @@ class MyApp extends StatelessWidget {
             transition: Transition.cupertino),
         GetPage(
             name: '/scan',
-            page: () => const ScanRackPage(),
+            page: () => const RegisterPage(),
             transition: Transition.cupertino),
         GetPage(
             name: '/regis',
-            page: () => const ScanRackPage(),
+            page: () => const RegisterPage(),
+            transition: Transition.cupertino),
+        GetPage(
+            name: '/qrcode',
+            page: () => const QrcodeScanner(),
             transition: Transition.cupertino),
       ],
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
     );

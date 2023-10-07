@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
     return WillPopScope(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('EQUIPMENT CHECK SHEET'),
+          title: const Text('PALLET RACK CONTROL'),
           centerTitle: true,
           backgroundColor: theme.colorScheme.primary,
           foregroundColor: theme.colorScheme.surface,
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.topCenter,
                     child: Wrap(children: [
                       Text(
-                        '  EQUIPMENT\r\nCHECK SHEET',
+                        '  PALLET RACK\r\n      CONTROL',
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 32,
