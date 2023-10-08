@@ -28,7 +28,7 @@ class PalletNoValidator extends TextFieldValidator {
 
 class QrCodeAValidator extends TextFieldValidator {
   // pass the error text to the super constructor
-  QrCodeAValidator({String errorText = 'กรุณาใส่หมายเลข Pallet ถูกต้อง'})
+  QrCodeAValidator({String errorText = 'กรุณาใส่หมายเลข QRCODE ให้ถูกต้อง'})
       : super(errorText);
   @override
   bool get ignoreEmptyValues => true;
@@ -42,7 +42,7 @@ class QrCodeAValidator extends TextFieldValidator {
 
 class QrCodeBValidator extends TextFieldValidator {
   // pass the error text to the super constructor
-  QrCodeBValidator({String errorText = 'กรุณาใส่หมายเลข Pallet ถูกต้อง'})
+  QrCodeBValidator({String errorText = 'กรุณาใส่หมายเลข QRCODE ให้ถูกต้อง'})
       : super(errorText);
   @override
   bool get ignoreEmptyValues => true;

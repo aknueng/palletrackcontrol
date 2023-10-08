@@ -11,7 +11,7 @@ void main() async {
   runApp(const MyApp());
 }
 
-String initPage = '/step';
+String initPage = '/scan';
 Future checkAccount() async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
   String chkLogin = prefs.getString('code') ?? '';
